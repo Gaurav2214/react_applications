@@ -140,5 +140,15 @@ ul{
         left: 0;
         top: rem(50);
     }
+    &.otp_box{
+        display: flex;
+        gap: rem(8);
+        input{
+            width: rem(25);
+            border-radius: rem(4);
+            text-align: center;
+            @include set-typography(16, 26);
+        }
+    }
 }
 
