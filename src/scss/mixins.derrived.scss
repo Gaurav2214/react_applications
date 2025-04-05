@@ -1,0 +1,264 @@
+@import "variables.scss";
+@import "functions.scss";
+@import "extends.scss";
+@import "mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@mixin heading-1() {
+  @include set-typography($fs: 75, $lh: 86);
+  font-family: $font-gentium;
+  font-weight: 500;
+  color: $clr-4;
+}
+
+
+@mixin heading-2() {
+  @include set-typography($fs: 20, $lh: 30);
+  font-family: $font-gentium;
+  font-weight: $bold;
+  color: $primary;
+}
+@mixin heading-3() {
+  @include set-typography($fs: 24, $lh: 30);
+  font-family: $font-gentium;
+  font-weight: 500;
+  color: $clr-3;
+}
+@mixin heading-4() {
+  @include set-typography($fs: 50, $lh: 60);
+  font-family: $font-dmserif;
+  font-weight: 400;
+  color: $clr-2;
+  font-style: italic;
+}
+@mixin heading-5() {
+  @include set-typography($fs: 50, $lh: 60);
+  font-family: $font-roboto;
+  font-weight: 500;
+  color: $clr-2;
+}
+
+
+
+@mixin desc-1() {
+  @include set-typography($fs: 16, $lh: 19.5);
+  font-family: $font-montserrat;
+  font-weight: $semi-bold;
+  color: $clr-3;
+}
+@mixin desc-2() {
+  @include set-typography($fs: 10, $lh: 12);
+  font-family: $font-montserrat;
+  font-weight: 400;
+  color: $clr-3;
+}
+@mixin desc-3() {
+  @include set-typography($fs: 18, $lh: 24);
+  font-family: $font-gentium;
+  font-weight: 400;
+  color: $clr-2;
+}
+@mixin desc-4() {
+  @include set-typography($fs: 14, $lh: 21);
+  font-family: $font-gentium;
+  font-weight: 600;
+  color: $clr-3;
+}
+@mixin desc-5() {
+  @include set-typography($fs: 24, $lh: 32);
+  font-family: $font-sfpro;
+  font-weight: 400;
+  color: $clr-6;
+}
+@mixin desc-6() {
+  @include set-typography($fs: 14, $lh: 21);
+  font-family: $font-montserrat;
+  font-weight: 500;
+  color: $clr-3;
+}
+@mixin desc-7() {
+  @include set-typography($fs: 26, $lh: 32);
+  font-family: $font-roboto;
+  font-weight: 400;
+  color: $clr-2;
+}
+
+@mixin input-style-1() {
+  background: $clr-1;
+  border: 1px solid $clr-5;
+  padding: rem(16) rem(24);
+  width: 100%;
+  @include set-border-radius($m: 36, $d: 36);
+
+  @include breakpoint($end-small){
+    padding: rem(12) rem(20);
+  }
+}
+
+@mixin set-more-link(){
+  @include set-typography($fs: 14, $lh: 17);
+  font-family: $font-montserrat;
+  font-weight: $semi-bold;
+  color: $primary;
+  text-decoration: none;
+  background: none;
+  border: none;
+
+  @include hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin set-dot(){
+  position: relative;
+  padding-left: rem(8);
+
+  &:before {
+    content: '';
+    width: rem(2);
+    height: rem(2);
+    background: $clr-5;
+    border-radius: 50%;
+    display: inline-block;;
+    position: absolute;
+    left: 0%;
+    top: 45%;
+  }
+}
+
+@mixin set-slash(){
+  position: relative;
+  padding-left: rem(12);
+
+  &:before {
+    content: '/';   
+    display: inline-block;;
+    position: absolute;
+    left: 0%;
+    top: 6%;
+  }
+}
+
+
+@mixin set-labels() {
+  @include set-flex-box($jc: flex-start, $ai: center);
+  @include flex-property(flex-wrap, wrap);
+
+  li {
+    margin-right: rem(8);
+    text-transform: capitalize;
+    
+    @include desc-6();
+    //color: $clr-30;
+    
+    @include breakpoint($end-small){
+      // @include set-typography($fs: 12, $lh: 15);
+      // font-weight: $medium;
+    }
+
+    &+li {
+     @include set-dot();
+    }    
+  }
+
+}
+
+@mixin set-breadcrum() {
+  @include set-flex-box($jc: flex-start, $ai: center);
+  @include flex-property(flex-wrap, wrap);
+
+  li {
+    margin-right: rem(8);
+    text-transform: capitalize;
+    
+    @include desc-23();
+    
+    @include breakpoint($end-small){
+      // @include set-typography($fs: 12, $lh: 20);
+      // font-weight: $medium;      
+    }
+
+    &+li {
+     @include set-slash();
+    }
+  }
+
+}
+
+@mixin set-curvy-pic-frame(
+  $m: 62, 
+  $d: 80, 
+  $m-radius: 4px 8px 4px 20px, 
+  $d-radius: 4px 16px 4px 40px){
+
+      width: rem(#{$m});
+      height: rem(#{$m});
+      border-radius: $m-radius;
+      background: transparent;
+      overflow: hidden;
+
+      @include breakpoint($end-small){
+        width: rem(#{$d});
+        height: rem(#{$d});
+        border-radius: #{$d-radius};
+      }
+
+      img {
+        display: block;
+        //object-fit: cover; 
+        width: rem(#{$m});
+        height: rem(#{$m}); 
+        @include breakpoint($end-small){
+          width: rem(#{$d});
+          height: rem(#{$d});
+        }      
+      }
+}
+
+@mixin insert-section-partition($param: 60) {
+  padding-top: rem(#{$param});
+  margin-top: rem(#{$param});
+  border-top: 1px solid #cccccc;
+  // max-width: 992px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin insert-section-partition-bottom-side($param: 20) {
+  &:after{
+    margin: rem(25) auto rem(15) auto;
+    content: "";
+    display: block;
+    border-bottom: 1px solid #cccccc;
+    max-width: 992px;    
+    @include breakpointmax($end-small){  
+      margin: rem(20) auto 30px auto;
+    }
+  }
+}
+
+@mixin nav-hover-data-news {
+  display: flex;
+  position: relative;
+  min-width:rem(180);
+  top: 0;
+  border-radius: 12px 12px;
+}
+@mixin nav-hover-data {
+  display: flex;
+  position: relative;
+  width:rem(980);
+  margin:0 auto;
+  top: 0;
+  border-radius: 12px 12px;
+}
+
+@mixin sprite-icon-img {
+  background-image: url(#{$img-path}sprite-icons.svg?mod=28);
+  background-repeat: no-repeat;
+}
+
+@mixin sprite-icon-play-img {
+  background-image: url(#{$img-path}spriteBlack.svg?mod=28);
+  background-repeat: no-repeat;
+}
