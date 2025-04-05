@@ -1,0 +1,372 @@
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Average+Sans&family=DM+Serif+Display:ital@0;1&family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+*, html, body {
+  margin: 0;
+  padding: 0; }
+
+*, html, body {
+  margin: 0;
+  padding: 0; }
+
+.input-box {
+  background: #FFF;
+  border: 1px solid #c22032;
+  padding: 16px 24px;
+  width: 100%;
+  border-radius: 36px; }
+  @media screen and (min-width: 1000px) {
+    .input-box {
+      border-radius: 36px; } }
+  @media screen and (min-width: 1000px) {
+    .input-box {
+      padding: 12px 20px; } }
+
+@media screen and (max-width: 1000px) {
+  .desktop-view {
+    display: none !important; } }
+
+@media screen and (min-width: 1000px) {
+  .mobile-view {
+    display: none !important; } }
+
+.hide {
+  display: none !important; }
+
+.btn, .btn-vote {
+  padding: 11px 30px;
+  background: #1e417c;
+  color: #fff;
+  border: 1px solid #1e417c;
+  border-radius: 40px;
+  width: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  transition: all ease 0.5s;
+  will-change: transform;
+  transform: translateZ(0);
+  outline: none; }
+  .btn:hover, .btn:focus, .btn-vote:hover, .btn-vote:focus {
+    background: #fff;
+    color: #1e417c; }
+  .btn.primary, .btn-vote.primary {
+    background: #c22032;
+    border-color: #c22032; }
+    .btn.primary:hover, .btn.primary:focus, .btn-vote.primary:hover, .btn-vote.primary:focus {
+      background: #FFF;
+      border-color: #c22032;
+      color: #c22032; }
+  @media screen and (max-width: 1000px) {
+    .btn, .btn-vote {
+      font-size: 14px;
+      line-height: 21px; } }
+
+.blinker {
+  width: 11px;
+  height: 11px;
+  background-color: #1e417c;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: pulse 1.5s infinite alternate ease-in-out; }
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center; }
+  .button-group button {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid rgba(61, 87, 126, 0.2);
+    padding: 12px 20px;
+    background: transparent;
+    border-radius: 10px; }
+  .button-group .cancel-button {
+    color: #000; }
+  .button-group .submit-button {
+    color: #1e417c;
+    border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%);
+    border-image-slice: 0;
+    background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 7px; }
+
+* {
+  word-wrap: break-word; }
+
+html {
+  width: 100vw;
+  overflow-x: hidden; }
+
+html, body {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased; }
+
+header, footer, aside, main, section, fieldset, nav {
+  display: block; }
+
+ul, ol {
+  list-style: none; }
+
+img,
+picture,
+source {
+  display: inline-block; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+button,
+[role="button"] {
+  cursor: pointer; }
+
+#skiptocontent a {
+  padding: 0 25px;
+  color: #FFF;
+  background: #ef1212;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 40px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  z-index: 100;
+  transition: all ease 0.5s; }
+  #skiptocontent a:focus {
+    left: 0px;
+    top: 0px;
+    text-decoration: underline;
+    outline: none; }
+
+#maincontent {
+  position: relative;
+  z-index: 99; }
+  @media screen and (max-width: 1000px) {
+    #maincontent {
+      z-index: 2; } }
+
+*, html, body {
+  margin: 0;
+  padding: 0; }
+
+*, html, body {
+  margin: 0;
+  padding: 0; }
+
+.input-box {
+  background: #FFF;
+  border: 1px solid #c22032;
+  padding: 16px 24px;
+  width: 100%;
+  border-radius: 36px; }
+  @media screen and (min-width: 1000px) {
+    .input-box {
+      border-radius: 36px; } }
+  @media screen and (min-width: 1000px) {
+    .input-box {
+      padding: 12px 20px; } }
+
+@media screen and (max-width: 1000px) {
+  .desktop-view {
+    display: none !important; } }
+
+@media screen and (min-width: 1000px) {
+  .mobile-view {
+    display: none !important; } }
+
+.hide {
+  display: none !important; }
+
+.btn, .btn-vote {
+  padding: 11px 30px;
+  background: #1e417c;
+  color: #fff;
+  border: 1px solid #1e417c;
+  border-radius: 40px;
+  width: auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  transition: all ease 0.5s;
+  will-change: transform;
+  transform: translateZ(0);
+  outline: none; }
+  .btn:hover, .btn:focus, .btn-vote:hover, .btn-vote:focus {
+    background: #fff;
+    color: #1e417c; }
+  .btn.primary, .btn-vote.primary {
+    background: #c22032;
+    border-color: #c22032; }
+    .btn.primary:hover, .btn.primary:focus, .btn-vote.primary:hover, .btn-vote.primary:focus {
+      background: #FFF;
+      border-color: #c22032;
+      color: #c22032; }
+  @media screen and (max-width: 1000px) {
+    .btn, .btn-vote {
+      font-size: 14px;
+      line-height: 21px; } }
+
+.blinker {
+  width: 11px;
+  height: 11px;
+  background-color: #1e417c;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: pulse 1.5s infinite alternate ease-in-out; }
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center; }
+  .button-group button {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    border: 2px solid rgba(61, 87, 126, 0.2);
+    padding: 12px 20px;
+    background: transparent;
+    border-radius: 10px; }
+  .button-group .cancel-button {
+    color: #000; }
+  .button-group .submit-button {
+    color: #1e417c;
+    border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%);
+    border-image-slice: 0;
+    background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 7px; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1100px;
+  padding-left: 24px;
+  padding-right: 24px; }
+
+.header {
+  background: #fff;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px; }
+  .header__inner {
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+    align-items: center;
+    height: 75px; }
+    .header__inner h1 {
+      font-family: "Gentium Plus", serif;
+      font-size: 30px;
+      line-height: 40px; }
+
+.module-head .module-title {
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #ff3131, #2323ff);
+  -webkit-background-clip: text;
+  color: #000;
+  font-family: "DM Serif Display", serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 54px; }
+  .module-head .module-title + .module-subtitle {
+    color: #9a9a9a;
+    font-family: Lato, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 10px; }
+  @media screen and (max-width: 1000px) {
+    .module-head .module-title {
+      font-size: 24px;
+      line-height: 32px;
+      text-shadow: 0px 3.55px 7.11px rgba(0, 0, 0, 0.25); }
+      .module-head .module-title + .module-subtitle {
+        font-size: 14px;
+        line-height: 21px;
+        margin-top: 5px; } }
+
+ul.lists {
+  list-style: inside;
+  margin-top: 25px; }
+  ul.lists li {
+    font-size: 18px;
+    line-height: 24px;
+    font-family: "Gentium Plus", serif;
+    font-weight: 400;
+    color: #000;
+    line-height: 40px; }
+    ul.lists li a {
+      color: #1e417c; }
+
+.form-group {
+  margin: 25px 0;
+  position: relative; }
+  .form-group input {
+    width: 300px;
+    padding: 10px 20px;
+    border: 1px solid rgba(61, 87, 126, 0.45);
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    line-height: 24px; }
+    .form-group input:hover, .form-group input:focus {
+      outline: 0; }
+    .form-group input:focus, .form-group input:-internal-autofill-selected, .form-group input:autofill, .form-group input.valid, .form-group input:focus-visible {
+      border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) !important;
+      border-image-slice: 0 !important;
+      background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box !important;
+      background-color: transparent !important; }
+      .form-group input:focus + label, .form-group input:-internal-autofill-selected + label, .form-group input:autofill + label, .form-group input.valid + label, .form-group input:focus-visible + label {
+        top: -7px;
+        background: #fff;
+        padding: 0 5px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400; }
+  .form-group label {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 18px;
+    line-height: 26px;
+    color: #1e417c;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+    pointer-events: none; }
+  .form-group .input-error {
+    border-color: red; }
+  .form-group small {
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 50px; }

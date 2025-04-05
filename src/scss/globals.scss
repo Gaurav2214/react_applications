@@ -1,0 +1,78 @@
+@import "mixins.derrived.scss";
+  .input-box {
+    @include input-style-1();
+  }
+
+  .desktop-view {
+    @include breakpointmax($end-small) {
+      display: none !important;
+    }
+  }
+
+  .mobile-view {
+    @include breakpoint($end-small) {
+      display: none !important;
+    }
+  }
+
+  .hide {
+    display: none !important;
+  }
+
+  .btn, .btn-vote {
+    @include btn($clr-3);
+    will-change: transform;
+    transform: translateZ(0);
+    outline: none;
+    &.primary{
+      background: $clr-5;
+      border-color: $clr-5;
+      @include hover(){
+        background: $clr-1;
+        border-color: $clr-5;
+        color: $clr-5;
+      }
+    }
+    @include breakpointmax($end-small){
+      @include set-typography(14, 21);
+    }
+  }
+  .blinker {
+    width: rem(11);
+    height: rem(11);
+    background-color: $clr-3;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: pulse 1.5s infinite alternate ease-in-out;
+}
+.button-group{
+  display: flex;
+  gap: rem(10);
+  justify-content: center;
+  button{
+    @include set-typography(16, 22);
+    font-weight: 700;
+    font-family: $font-montserrat;
+    border: 2px solid rgba(61, 87, 126, 0.2);
+    padding: rem(12) rem(20);
+    background: transparent;
+    border-radius: rem(10);
+  }
+  .cancel-button{
+    color: $clr-2;
+  }
+  .submit-button{
+    color: $clr-3;
+    border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%);
+    border-image-slice: 0;
+    background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+  }
+}
+
+   
+
+  
+
