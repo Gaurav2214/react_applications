@@ -71,7 +71,7 @@ ul{
         list-style: inside;
         margin-top: rem(25);
         li{
-            @include desc-3();
+            @include desc-1();
             line-height: rem(40);
             a{
                 color: $clr-3;
