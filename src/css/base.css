@@ -116,7 +116,7 @@ button,
   margin-bottom: 50px; }
   .header__inner {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 50px;
     align-items: center;
     height: 75px; }
@@ -168,21 +168,21 @@ ul.lists {
 .form-group {
   margin: 25px 0;
   position: relative; }
-  .form-group input {
+  .form-group input[type="text"] {
     width: 300px;
     padding: 10px 20px;
     border: 1px solid rgba(61, 87, 126, 0.45);
     border-radius: 8px;
     background-color: #f7f7f7;
     line-height: 24px; }
-    .form-group input:hover, .form-group input:focus {
+    .form-group input[type="text"]:hover, .form-group input[type="text"]:focus {
       outline: 0; }
-    .form-group input:focus, .form-group input:-internal-autofill-selected, .form-group input:autofill, .form-group input.valid, .form-group input:focus-visible {
+    .form-group input[type="text"]:focus, .form-group input[type="text"]:-internal-autofill-selected, .form-group input[type="text"]:autofill, .form-group input[type="text"].valid, .form-group input[type="text"]:focus-visible {
       border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) !important;
       border-image-slice: 0 !important;
       background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box !important;
       background-color: transparent !important; }
-      .form-group input:focus + label, .form-group input:-internal-autofill-selected + label, .form-group input:autofill + label, .form-group input.valid + label, .form-group input:focus-visible + label {
+      .form-group input[type="text"]:focus + label, .form-group input[type="text"]:-internal-autofill-selected + label, .form-group input[type="text"]:autofill + label, .form-group input[type="text"].valid + label, .form-group input[type="text"]:focus-visible + label {
         top: -7px;
         background: #fff;
         padding: 0 5px;
@@ -218,3 +218,19 @@ ul.lists {
       text-align: center;
       font-size: 16px;
       line-height: 26px; }
+  .form-group .form-group {
+    margin-left: 20px; }
+  .form-group .checkbox_container__inner {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center; }
+    .form-group .checkbox_container__inner label {
+      position: static; }
+
+.goback_btn {
+  background: url("../images/back-btn.svg") 0 0 no-repeat;
+  border: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 40px; }
