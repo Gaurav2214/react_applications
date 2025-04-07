@@ -22,18 +22,6 @@
 	}
 }
 
-@mixin placeholder($color) {
-	&::-webkit-input-placeholder {
-	   color: $color;  
-	}
-	&::-moz-placeholder {
-	   color: $color;  
-	}
-	&:-ms-input-placeholder {
-	   color: $color;  
-	} 
-}
-
 @mixin browser-support($property, $value){
 	-ms-#{$property}: $value;
 	-webkit-#{$property}: $value;
@@ -52,26 +40,6 @@
     }
 }
 
-@mixin btn($bg) {
-	padding: rem(11) rem(30);
-	background: $bg;
-	color: #fff;
-	border: 1px solid $bg;
-	border-radius: 40px;
-	width: auto;
-	font-family: $font-openSans;
-	font-size: rem(19);
-	font-weight: 400;
-	line-height: rem(24);
-	text-align: center;
-	transition: all ease 0.5s;
-
-	@include hover {
-		background: #fff;
-		color: $bg;
-	}
-}
-
 @mixin btn-invert($bg) {
 	@include btn($bg);
 	background: #fff;
@@ -88,83 +56,9 @@
 	}
 }
 
-@mixin define-font($font){
-	@font-face {
-		font-family: #{$font};
-		font-display: swap;
-		src: url('#{$font-path}#{$font}.woff2'),
-			 url('#{$font-path}#{$font}.woff')
-	}
-}
-
-@mixin custom-scrollbar {
-	/* width */
-	&::-webkit-scrollbar {
-		width: 4px;
-		}
-		
-	/* Track */
-	&::-webkit-scrollbar-track {
-	background: #f1f1f1; 
-	}
-	
-	/* Handle */
-	&::-webkit-scrollbar-thumb {
-	background: #D7D0CE; 
-	}
-	
-	/* Handle on hover */
-	&::-webkit-scrollbar-thumb:hover {
-	background: #555; 
-	}
-}
-@mixin custom-scrollbar-light {
-	/* width */
-	&::-webkit-scrollbar {
-		width: 4px;
-		}
-		
-	/* Track */
-	&::-webkit-scrollbar-track {
-	background: transparent; 
-	}
-	
-	/* Handle */
-	&::-webkit-scrollbar-thumb {
-		background: transparent; 
-	}
-	
-	/* Handle on hover */
-	&::-webkit-scrollbar-thumb:hover {
-		background: transparent; 
-	}
-}
-
 @mixin set-typography($fs:12, $lh:16) {
 	font-size: rem(#{$fs});
 	line-height: rem(#{$lh});
-}
-
-@mixin set-border-radius($m: 12, $d: 20) {
-	border-radius: rem(#{$m});
-
-	@include breakpoint($end-small){
-		border-radius: rem(#{$d});
-	}
-}
-
-@mixin set-line-clamp($count: 3) {
-	display: -webkit-box;
-	-webkit-line-clamp: #{$count};
-	-webkit-box-orient: vertical;  
-	overflow: hidden;	  
-}
-
-@mixin set-flex-box($jc: space-between, $ai: flex-start, $fd: row){
-	@include flex-property(display, flex);
-    @include flex-property(justify-content, #{$jc});
-    @include flex-property(align-items, #{$ai});
-    @include flex-property(flex-direction, #{$fd});
 }
 
 @mixin insert-box-shadow($value: 0px 4px 20px) {

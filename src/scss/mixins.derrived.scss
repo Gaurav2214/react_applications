@@ -5,61 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
-
 @mixin desc-1() {
-  @include set-typography($fs: 16, $lh: 19.5);
-  font-family: $font-montserrat;
-  font-weight: $semi-bold;
-  color: $clr-3;
-}
-@mixin desc-2() {
-  @include set-typography($fs: 10, $lh: 12);
-  font-family: $font-montserrat;
-  font-weight: 400;
-  color: $clr-3;
-}
-@mixin desc-3() {
   @include set-typography($fs: 18, $lh: 24);
   font-family: $font-gentium;
   font-weight: 400;
   color: $clr-2;
-}
-
-@mixin input-style-1() {
-  background: $clr-1;
-  border: 1px solid $clr-5;
-  padding: rem(16) rem(24);
-  width: 100%;
-  @include set-border-radius($m: 36, $d: 36);
-
-  @include breakpoint($end-small){
-    padding: rem(12) rem(20);
-  }
-}
-
-
-@mixin set-labels() {
-  @include set-flex-box($jc: flex-start, $ai: center);
-  @include flex-property(flex-wrap, wrap);
-
-  li {
-    margin-right: rem(8);
-    text-transform: capitalize;
-    
-    @include desc-6();
-    &+li {
-     @include set-dot();
-    }    
-  }
-
-}
-
-@mixin sprite-icon-img {
-  background-image: url(#{$img-path}sprite-icons.svg?mod=28);
-  background-repeat: no-repeat;
-}
-
-@mixin sprite-icon-play-img {
-  background-image: url(#{$img-path}spriteBlack.svg?mod=28);
-  background-repeat: no-repeat;
 }
