@@ -24,3 +24,62 @@ export const autoSearchData = [
     { number: 8, title: "Pre-Departure Orientation", description: "Join sessions covering travel, accommodation, and local culture." },
     { number: 9, title: "Post-Arrival Support", description: "Support in settling in, finding services, and connecting with communities." }
 ];
+
+export const checkBoxData = [
+    {
+        id: 1,
+        name: 'Fruits',
+        children: [
+            {
+                id: 2,
+                name: 'Citrus',
+                children: [
+                    {
+                        id: 3,
+                        name: 'Orange',
+                    },
+                    {
+                        id: 3,
+                        name: 'Lemon',
+                    },
+                    {
+                        id: 3,
+                        name: 'Kiwi',
+                    },
+                ],
+            },
+            {
+                id: 5,
+                name: 'Berries',
+                children:[
+                    {
+                        id: 6,
+                        name:"Straberry",
+                    },
+                    {
+                        id: 7,
+                        name:"Blueberry",
+                    }
+                ]
+            },
+            {
+                id:8,
+                name: 'Tropical',
+                children: [
+                    {
+                        id: 9,
+                        name: 'Mango',
+                    },
+                    {
+                        id: 10,
+                        name: "Banana",
+                    },
+                ],
+            },
+            {
+                id:11,
+                name:'Apple',
+            }
+        ]
+    }
+];
