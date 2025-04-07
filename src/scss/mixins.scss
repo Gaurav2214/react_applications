@@ -88,42 +88,6 @@
 	}
 }
 
-// @mixin container($w: 1520) {
-//     margin-left: auto;
-// 	margin-right: auto;
-// 	max-width: #{$w}px;
-// 	padding-left: 30px;
-// 	padding-right: 30px;
-// }
-
-// @mixin container-min($w: 910) {
-//     margin-left: auto;
-// 	margin-right: auto;
-// 	max-width: #{$w}px;
-// 	padding-left: 30px;
-// 	padding-right: 30px;
-// }
-
-// @mixin container-mid($w: 1720) {
-//     margin-left: auto;
-// 	margin-right: auto;
-// 	max-width: #{$w}px;
-// 	padding-left: 30px;
-// 	padding-right: 30px;
-// }
-
-// @mixin container-max($w: 1920) {
-//     margin-left: auto;
-// 	margin-right: auto;
-// 	max-width: #{$w}px;
-// 	padding-left: 30px;
-// 	padding-right: 30px;
-// 	@include breakpointmax($end-small){
-// 		padding-left: 16px;
-// 		padding-right: 16px;
-// 	}
-// }
-
 @mixin define-font($font){
 	@font-face {
 		font-family: #{$font};
@@ -206,14 +170,6 @@
 @mixin insert-box-shadow($value: 0px 4px 20px) {
 	box-shadow: #{$value} rgba(0, 0, 0, 0.1);
 }
-
-@mixin set-children-dib ($va: middle) {
-	> * {
-		display: inline-block;
-		vertical-align: #{$va};
-	}
-}
-
 
 @mixin clearfix {
 	&:after {
