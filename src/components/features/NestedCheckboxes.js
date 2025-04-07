@@ -2,14 +2,19 @@ import React from 'react';
 import { checkBoxData } from '../utils/helper';
 
 const CreateCheckBox = ({data}) => {
-  console.log(data);
+  //console.log(data);
   return (
     <div className=''>
       {data.map((node) => 
-        <div className='form-group' key={node?.id}>
-          <input type='checkbox' />
-          <label>{node?.name}</label>
-        </div>
+        <>
+          <div className='form-group checkbox_container' key={node?.id}>
+            <div className='checkbox_container__inner'>
+              <input type='checkbox' />
+              <label>{node?.name}</label>
+            </div>
+            {node?.children && <CreateCheckBox data={node?.children} />}
+          </div>
+        </>
       )}
     </div>
   )

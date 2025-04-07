@@ -19,7 +19,7 @@
     margin-bottom: rem(50);
     &__inner{
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         gap: rem(50);
         align-items: center;
         height: rem(75);
@@ -85,7 +85,7 @@ ul{
     margin: rem(25) 0;
     position: relative;
 
-    input {
+    input[type="text"] {
         width: rem(300);
         padding: rem(10) rem(20);
         border: 1px solid rgba(61, 87, 126, 0.45);
@@ -150,5 +150,25 @@ ul{
             @include set-typography(16, 26);
         }
     }
+    .form-group{
+        margin-left: rem(20);
+    }
+    .checkbox_container__inner{
+        display: flex;
+        justify-content: flex-start;
+        gap: rem(20);
+        align-items: center;
+        label{
+            position: static;
+        }
+    }
+}
+
+.goback_btn {
+    background: url("../images/back-btn.svg") 0 0 no-repeat;
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    width: 40px;
 }
 
