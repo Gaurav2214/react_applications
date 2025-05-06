@@ -211,3 +211,21 @@ ul {
     height: 30px;
     width: 40px;
 }
+
+.show-keyword{
+    ul{
+        display: flex;
+        gap: rem(12);
+        li{
+            background: rgba(0, 0, 0, 0.1);
+            @include set-typography(14, 21);
+            border-radius: rem(50);
+            padding: rem(8) rem(12);
+            span{
+                margin-left: rem(5);
+                color: $primary;
+                cursor: pointer;
+            }
+        }
+    }
+}

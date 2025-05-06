@@ -15,6 +15,10 @@ export const features = [
         name: 'Dynamic Counter with Start, Pause and Reset Button',
         routename: '/dynamic-counter',
       },
+      {
+        name: 'Chips Input',
+        routename: '/chips-input',
+      },
 ];
 
 export const autoSearchData = [
