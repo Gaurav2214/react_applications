@@ -1,29 +1,40 @@
-
 @import "reset.scss";
 @import "animations.scss";
 @import "mixins.scss";
 @import "mixins.derrived.scss";
 @import "globals.scss";
-  
-.container{
+
+.container {
     margin-left: auto;
     margin-right: auto;
     max-width: rem(1100);
     padding-left: rem(24);
     padding-right: rem(24);
 }
+.btn{
+    border: none;
+    padding: rem(10);
+    border-radius: rem(6);
+    background: #1e417c;
+    color: #fff;
+    font-family: $font-openSans;
+    @include set-typography(14, 21);
+    font-weight: 500;
+}
 
-.header{
+.header {
     background: #fff;
-    box-shadow: 0 2px 14px rgba(0,0,0,.1);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
     margin-bottom: rem(50);
-    &__inner{
+
+    &__inner {
         display: flex;
         justify-content: space-between;
         gap: rem(50);
         align-items: center;
         height: rem(75);
-        h1{
+
+        h1 {
             font-family: $font-gentium;
             font-size: rem(30);
             line-height: rem(40);
@@ -52,10 +63,12 @@
             line-height: 32px;
             margin-top: 10px;
         }
-        @include breakpointmax($end-small){
+
+        @include breakpointmax($end-small) {
             font-size: 24px;
             line-height: 32px;
             text-shadow: 0px 3.55px 7.11px rgba(0, 0, 0, 0.25);
+
             &+.module-subtitle {
                 font-size: 14px;
                 line-height: 21px;
@@ -66,14 +79,16 @@
 }
 
 
-ul{
-    &.lists{
+ul {
+    &.lists {
         list-style: inside;
         margin-top: rem(25);
-        li{
+
+        li {
             @include desc-1();
             line-height: rem(40);
-            a{
+
+            a {
                 color: $clr-3;
             }
         }
@@ -103,9 +118,10 @@ ul{
         &.valid,
         &:focus-visible {
             border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) !important;
-            border-image-slice: 0!important;
+            border-image-slice: 0 !important;
             background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box !important;
-            background-color: transparent!important;
+            background-color: transparent !important;
+
             &+label {
                 top: rem(-7);
                 background: #fff;
@@ -140,28 +156,52 @@ ul{
         left: 0;
         top: rem(50);
     }
-    &.otp_box{
+
+    &.otp_box {
         display: flex;
         gap: rem(8);
-        input{
+
+        input {
             width: rem(25);
             border-radius: rem(4);
             text-align: center;
             @include set-typography(16, 26);
         }
     }
-    .form-group{
+
+    &.checkbox_container {
         margin-left: rem(20);
-    }
-    .checkbox_container__inner{
-        display: flex;
-        justify-content: flex-start;
-        gap: rem(20);
-        align-items: center;
-        label{
+
+        label {
             position: static;
+            margin-left: rem(10);
         }
     }
+}
+
+.counter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: rem(20);
+    gap: rem(20);
+    h4{
+        @include set-typography(18, 26);
+        color: $clr-3;
+        font-weight: 500;
+        font-family: $font-openSans;
+    }
+    h5{
+
+    }
+    .controls{
+        display: flex;
+        gap: rem(15);
+        button{
+
+        }
+    }
+
 }
 
 .goback_btn {
@@ -171,4 +211,3 @@ ul{
     height: 30px;
     width: 40px;
 }
-

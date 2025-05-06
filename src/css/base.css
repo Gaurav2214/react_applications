@@ -110,6 +110,17 @@ button,
   padding-left: 24px;
   padding-right: 24px; }
 
+.btn {
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  background: #1e417c;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 500; }
+
 .header {
   background: #fff;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
@@ -218,15 +229,27 @@ ul.lists {
       text-align: center;
       font-size: 16px;
       line-height: 26px; }
-  .form-group .form-group {
+  .form-group.checkbox_container {
     margin-left: 20px; }
-  .form-group .checkbox_container__inner {
+    .form-group.checkbox_container label {
+      position: static;
+      margin-left: 10px; }
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px; }
+  .counter h4 {
+    font-size: 18px;
+    line-height: 26px;
+    color: #1e417c;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif; }
+  .counter .controls {
     display: flex;
-    justify-content: flex-start;
-    gap: 20px;
-    align-items: center; }
-    .form-group .checkbox_container__inner label {
-      position: static; }
+    gap: 15px; }
 
 .goback_btn {
   background: url("../images/back-btn.svg") 0 0 no-repeat;

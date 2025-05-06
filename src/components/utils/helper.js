@@ -11,6 +11,10 @@ export const features = [
       name: 'Nested Checkboxes',
       routename: '/checkboxes',
     },
+    {
+        name: 'Dynamic Counter with Start, Pause and Reset Button',
+        routename: '/dynamic-counter',
+      },
 ];
 
 export const autoSearchData = [
@@ -39,45 +43,45 @@ export const checkBoxData = [
                         name: 'Orange',
                     },
                     {
-                        id: 3,
+                        id: 4,
                         name: 'Lemon',
                     },
                     {
-                        id: 3,
+                        id: 5,
                         name: 'Kiwi',
                     },
                 ],
             },
             {
-                id: 5,
+                id: 6,
                 name: 'Berries',
                 children:[
                     {
-                        id: 6,
+                        id: 7,
                         name:"Straberry",
                     },
                     {
-                        id: 7,
+                        id: 8,
                         name:"Blueberry",
                     }
                 ]
             },
             {
-                id:8,
+                id:9,
                 name: 'Tropical',
                 children: [
                     {
-                        id: 9,
+                        id: 10,
                         name: 'Mango',
                     },
                     {
-                        id: 10,
+                        id: 11,
                         name: "Banana",
                     },
                 ],
             },
             {
-                id:11,
+                id:12,
                 name:'Apple',
             }
         ]
