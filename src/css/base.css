@@ -257,3 +257,17 @@ ul.lists {
   cursor: pointer;
   height: 30px;
   width: 40px; }
+
+.show-keyword ul {
+  display: flex;
+  gap: 12px; }
+  .show-keyword ul li {
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    line-height: 21px;
+    border-radius: 50px;
+    padding: 8px 12px; }
+    .show-keyword ul li span {
+      margin-left: 5px;
+      color: #ef1212;
+      cursor: pointer; }
