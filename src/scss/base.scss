@@ -257,3 +257,25 @@ ul {
         }
     }
 }
+
+.folder-structure{
+    margin-top: 30px;
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: functions.rem(6);
+        li{
+            @include mixins.set-typography(16, 24);
+            font-family: variables.$font-gentium;
+            cursor: pointer;
+            span{
+                display: inline-block;
+                margin-right: functions.rem(5);
+            }
+            .children{
+                margin-left: functions.rem(30);
+                margin-top: functions.rem(10);
+            }
+        }
+    }
+}
