@@ -1,13 +1,13 @@
-@import "variables.scss";
-@import "functions.scss";
-@import "extends.scss";
-@import "mixins.scss";
+@use "variables.scss";
+@use "functions.scss";
+@use "extends.scss";
+@use "mixins.scss";
 @import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 
 @mixin desc-1() {
-  @include set-typography($fs: 18, $lh: 24);
-  font-family: $font-gentium;
+  @include mixins.set-typography($fs: 18, $lh: 24);
+  font-family: variables.$font-gentium;
   font-weight: 400;
-  color: $clr-2;
+  color: variables.$clr-2;
 }

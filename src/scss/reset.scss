@@ -1,8 +1,9 @@
-@import "variables.scss";
-@import "animations.scss";
-@import "mixins.scss";
-@import "mixins.derrived.scss";
-@import "globals.scss";
+@use "variables.scss";
+@use "animations.scss";
+@use "mixins.scss";
+@use "mixins.derrived.scss" as mixins2;
+@use "globals.scss";
+@use "functions";
 
 // Register Fonts
 // @include define-font($font-sangBVer-regular);
@@ -28,8 +29,8 @@
   html, body {
     @extend %reset-block;
     width: 100%;
-    font-size: rem(16);
-    font-family: $font-montserrat;
+    font-size: functions.rem(16);
+    font-family: variables.$font-montserrat;
     -webkit-tap-highlight-color: transparent;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -65,11 +66,11 @@
   #skiptocontent {
     a {
       padding: 0 25px;
-      color: $clr-1;
-      background: $primary;
+      color: variables.$clr-1;
+      background: variables.$primary;
       border: none;
-      font-size: rem(14);
-      font-weight: $bold;
+      font-size: functions.rem(14);
+      font-weight: variables.$bold;
       line-height: 40px;
       position: absolute;
       top: -40px;
@@ -89,7 +90,7 @@
   #maincontent{
     position: relative;
     z-index: 99;
-    @include breakpointmax($end-small){  
+    @include mixins.breakpointmax(variables.$end-small){  
       z-index: 2;
     }
   }

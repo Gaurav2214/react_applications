@@ -6,6 +6,7 @@ import ValidateOTP from './features/ValidateOTP';
 import NestedCheckboxes from './features/NestedCheckboxes';
 import DynamicCounter from './features/DynamicCounter';
 import ChipsInput from './features/ChipsInput';
+import ProgessBar from './features/ProgessBar';
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
             <Route exact path='/checkboxes' element={<NestedCheckboxes />} />
             <Route exact path='/dynamic-counter' element={<DynamicCounter />} />
             <Route exact path='/chips-input' element={<ChipsInput />} />
+            <Route exact path='/progress-bar' element={<ProgessBar />} />
         </Routes>
     </React.Fragment>
   )
