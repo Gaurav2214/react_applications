@@ -23,6 +23,10 @@ export const features = [
         name: 'Progress Bar',
         routename: '/progress-bar',
     },
+    {
+        name: 'File Explorer',
+        routename: '/file-explorer',
+    },
 ];
 
 export const autoSearchData = [
@@ -95,3 +99,86 @@ export const checkBoxData = [
         ]
     }
 ];
+
+export const folderStructure = [
+    {
+        id: 1,
+        "name": "public",
+        isFolder: true,
+        "children":[
+            {
+                id: 2,
+               "name":"index.html",
+               isFolder: false, 
+            },
+            {
+                id: 3,
+                "name":"manifest.json",
+                isFolder: false, 
+            },
+            {
+                id: 4,
+                "name":"robot.txt",
+                isFolder: false, 
+            }
+        ]
+    },
+    {
+        id: 5,
+        "name":"src",
+        isFolder: true,
+        children: [
+            {
+                id: 6,
+                name: "components",
+                isFolder: true,
+                children: [
+                    {
+                        id: 7,
+                        name: "utils",
+                        isFolder: true,
+                        children:[
+                            {
+                                id: 8,
+                                name: "healper.js",
+                                isFolder: false
+                            }
+                        ]
+                    },
+                    {
+                        id: 9,
+                        name: "css",
+                        isFolder: true,
+                        children:[
+                            {
+                                id: 10,
+                                name: "base.css",
+                                isFolder: false
+                            },
+                            {
+                                id: 11,
+                                name: "reset.css",
+                                isFolder: false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 12,
+        "name": "package.json",
+        isFolder: false
+    },
+    {
+        id: 13,
+        "name": "package-lock.json",
+        isFolder: false
+    },
+    {
+        id: 14,
+        "name": "README.md",
+        isFolder: false
+    },
+]
