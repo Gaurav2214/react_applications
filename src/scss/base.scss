@@ -244,8 +244,8 @@ ul {
         position: relative;
         
         .item{
-            background-color: #06a13f;
-            padding: functions.rem(10);
+            background: linear-gradient(96.63deg,#ed1116 -11.94%,#7503f8 98.77%);
+            padding: functions.rem(14) functions.rem(10);
             border-radius: functions.rem(26);
             transition: .5s all ease-in-out;
         }
@@ -253,7 +253,7 @@ ul {
             position: absolute;
             @include mixins.set-typography(14, 21);
             left: functions.rem(20);
-            top: 0;
+            top: functions.rem(4);
         }
     }
 }
