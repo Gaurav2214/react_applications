@@ -12,6 +12,7 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.4.1",
     "react-scripts": "5.0.1",
+    "sass": "^1.89.1",
     "scss": "^0.2.4",
     "scss-watch": "^1.0.1",
     "web-vitals": "^2.1.4"
@@ -22,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "scss": "node-sass src/scss -o src/css",
-    "scss-watch": "node-sass --watch src/scss -o src/css"
+    "scss-watch": "sass --watch src/scss:src/css"
   },
   "eslintConfig": {
     "extends": [

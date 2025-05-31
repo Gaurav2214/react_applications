@@ -1,3 +1,5 @@
+@use "functions";
+
 @mixin breakpoint($break) {
 	@media screen and (min-width:$break) {
 		@content;
@@ -57,8 +59,8 @@
 }
 
 @mixin set-typography($fs:12, $lh:16) {
-	font-size: rem(#{$fs});
-	line-height: rem(#{$lh});
+	font-size: functions.rem(#{$fs});
+	line-height: functions.rem(#{$lh});
 }
 
 @mixin insert-box-shadow($value: 0px 4px 20px) {

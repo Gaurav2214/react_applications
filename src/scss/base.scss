@@ -1,43 +1,45 @@
-@import "reset.scss";
-@import "animations.scss";
-@import "mixins.scss";
-@import "mixins.derrived.scss";
-@import "globals.scss";
+@use "reset.scss";
+@use "animations.scss";
+@use "mixins.scss";
+@use "mixins.derrived.scss" as mixins2;
+@use "globals.scss";
+@use "functions";
+@use "variables";
 
 .container {
     margin-left: auto;
     margin-right: auto;
-    max-width: rem(1100);
-    padding-left: rem(24);
-    padding-right: rem(24);
+    max-width: functions.rem(1100);
+    padding-left: functions.rem(24);
+    padding-right: functions.rem(24);
 }
 .btn{
     border: none;
-    padding: rem(10);
-    border-radius: rem(6);
+    padding: functions.rem(10);
+    border-radius: functions.rem(6);
     background: #1e417c;
     color: #fff;
-    font-family: $font-openSans;
-    @include set-typography(14, 21);
+    font-family: variables.$font-openSans;
+    @include mixins.set-typography(14, 21);
     font-weight: 500;
 }
 
 .header {
     background: #fff;
     box-shadow: 0 2px 14px rgba(0, 0, 0, .1);
-    margin-bottom: rem(50);
+    margin-bottom: functions.rem(50);
 
     &__inner {
         display: flex;
         justify-content: space-between;
-        gap: rem(50);
+        gap: functions.rem(50);
         align-items: center;
-        height: rem(75);
+        height: functions.rem(75);
 
         h1 {
-            font-family: $font-gentium;
-            font-size: rem(30);
-            line-height: rem(40);
+            font-family: variables.$font-gentium;
+            font-size: functions.rem(30);
+            line-height: functions.rem(40);
         }
     }
 }
@@ -50,10 +52,10 @@
         -webkit-background-clip: text;
         color: #000;
         font-family: "DM Serif Display", serif;
-        font-size: rem(40);
+        font-size: functions.rem(40);
         font-style: normal;
         font-weight: 400;
-        line-height: rem(54);
+        line-height: functions.rem(54);
 
         &+.module-subtitle {
             color: #9a9a9a;
@@ -64,7 +66,7 @@
             margin-top: 10px;
         }
 
-        @include breakpointmax($end-small) {
+        @include mixins.breakpointmax(variables.$end-small) {
             font-size: 24px;
             line-height: 32px;
             text-shadow: 0px 3.55px 7.11px rgba(0, 0, 0, 0.25);
@@ -72,7 +74,7 @@
             &+.module-subtitle {
                 font-size: 14px;
                 line-height: 21px;
-                margin-top: rem(5);
+                margin-top: functions.rem(5);
             }
         }
     }
@@ -82,14 +84,14 @@
 ul {
     &.lists {
         list-style: inside;
-        margin-top: rem(25);
+        margin-top: functions.rem(25);
 
         li {
-            @include desc-1();
-            line-height: rem(40);
+            @include mixins2.desc-1();
+            line-height: functions.rem(40);
 
             a {
-                color: $clr-3;
+                color: variables.$clr-3;
             }
         }
     }
@@ -97,18 +99,18 @@ ul {
 
 
 .form-group {
-    margin: rem(25) 0;
+    margin: functions.rem(25) 0;
     position: relative;
 
     input[type="text"] {
-        width: rem(300);
-        padding: rem(10) rem(20);
+        width: functions.rem(300);
+        padding: functions.rem(10) functions.rem(20);
         border: 1px solid rgba(61, 87, 126, 0.45);
-        border-radius: rem(8);
+        border-radius: functions.rem(8);
         background-color: rgba(247, 247, 247, 1);
-        line-height: rem(24);
+        line-height: functions.rem(24);
 
-        @include hover() {
+        @include mixins.hover() {
             outline: 0;
         }
 
@@ -123,10 +125,10 @@ ul {
             background-color: transparent !important;
 
             &+label {
-                top: rem(-7);
+                top: functions.rem(-7);
                 background: #fff;
                 padding: 0 5px;
-                @include set-typography(12, 18);
+                @include mixins.set-typography(12, 18);
                 font-weight: 400;
             }
         }
@@ -134,12 +136,12 @@ ul {
 
     label {
         position: absolute;
-        top: rem(10);
-        left: rem(20);
-        @include set-typography(18, 26);
-        color: $clr-3;
+        top: functions.rem(10);
+        left: functions.rem(20);
+        @include mixins.set-typography(18, 26);
+        color: variables.$clr-3;
         font-weight: 500;
-        font-family: $font-openSans;
+        font-family: variables.$font-openSans;
         text-transform: capitalize;
         -webkit-transition: all .2s ease;
         transition: all .2s ease;
@@ -154,27 +156,27 @@ ul {
         color: red;
         position: absolute;
         left: 0;
-        top: rem(50);
+        top: functions.rem(50);
     }
 
     &.otp_box {
         display: flex;
-        gap: rem(8);
+        gap: functions.rem(8);
 
         input {
-            width: rem(25);
-            border-radius: rem(4);
+            width: functions.rem(25);
+            border-radius: functions.rem(4);
             text-align: center;
-            @include set-typography(16, 26);
+            @include mixins.set-typography(16, 26);
         }
     }
 
     &.checkbox_container {
-        margin-left: rem(20);
+        margin-left: functions.rem(20);
 
         label {
             position: static;
-            margin-left: rem(10);
+            margin-left: functions.rem(10);
         }
     }
 }
@@ -183,20 +185,20 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: rem(20);
-    gap: rem(20);
+    margin-top: functions.rem(20);
+    gap: functions.rem(20);
     h4{
-        @include set-typography(18, 26);
-        color: $clr-3;
+        @include mixins.set-typography(18, 26);
+        color: variables.$clr-3;
         font-weight: 500;
-        font-family: $font-openSans;
+        font-family: variables.$font-openSans;
     }
     h5{
 
     }
     .controls{
         display: flex;
-        gap: rem(15);
+        gap: functions.rem(15);
         button{
 
         }
@@ -215,17 +217,43 @@ ul {
 .show-keyword{
     ul{
         display: flex;
-        gap: rem(12);
+        gap: functions.rem(12);
         li{
             background: rgba(0, 0, 0, 0.1);
-            @include set-typography(14, 21);
-            border-radius: rem(50);
-            padding: rem(8) rem(12);
+            @include mixins.set-typography(14, 21);
+            border-radius: functions.rem(50);
+            padding: functions.rem(8) functions.rem(12);
             span{
-                margin-left: rem(5);
-                color: $primary;
+                margin-left: functions.rem(5);
+                color: variables.$primary;
                 cursor: pointer;
             }
+        }
+    }
+}
+
+.progress-container{
+    display: flex;
+    gap: functions.rem(10);
+    flex-direction: column;
+    margin-top: functions.rem(20);
+    .progress-bar{
+        border: 1px solid #ccc;
+        border-radius: functions.rem(26);
+        overflow: hidden;
+        position: relative;
+        
+        .item{
+            background-color: #06a13f;
+            padding: functions.rem(10);
+            border-radius: functions.rem(26);
+            transition: .5s all ease-in-out;
+        }
+        .text{
+            position: absolute;
+            @include mixins.set-typography(14, 21);
+            left: functions.rem(20);
+            top: 0;
         }
     }
 }

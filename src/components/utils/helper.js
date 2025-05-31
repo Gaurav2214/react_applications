@@ -14,11 +14,15 @@ export const features = [
     {
         name: 'Dynamic Counter with Start, Pause and Reset Button',
         routename: '/dynamic-counter',
-      },
-      {
+    },
+    {
         name: 'Chips Input',
         routename: '/chips-input',
-      },
+    },
+    {
+        name: 'Progress Bar',
+        routename: '/progress-bar',
+    },
 ];
 
 export const autoSearchData = [

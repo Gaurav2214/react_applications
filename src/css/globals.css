@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @media screen and (max-width: 1000px) {
   .desktop-view {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media screen and (min-width: 1000px) {
   .mobile-view {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 .hide {
-  display: none !important; }
+  display: none !important;
+}
+
+/*# sourceMappingURL=globals.css.map */

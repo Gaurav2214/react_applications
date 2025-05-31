@@ -1,13 +1,15 @@
-@import "mixins.derrived.scss";
+@use "mixins.derrived.scss" as mixins2;
+@use "mixins";
+@use "variables";
 
   .desktop-view {
-    @include breakpointmax($end-small) {
+    @include mixins.breakpointmax(variables.$end-small) {
       display: none !important;
     }
   }
 
   .mobile-view {
-    @include breakpoint($end-small) {
+    @include mixins.breakpoint(variables.$end-small) {
       display: none !important;
     }
   }
