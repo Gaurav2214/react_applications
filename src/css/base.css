@@ -352,4 +352,33 @@ ul.lists li a {
   margin-top: 10px;
 }
 
+.question-container {
+  margin-top: 40px;
+}
+.question-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.question-container ul li .question {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: "Gentium Plus", serif;
+  cursor: pointer;
+}
+.question-container ul li .question::before {
+  content: ">";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  color: #ef1212;
+  font-weight: 600;
+}
+.question-container ul li .answer {
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  padding: 10px;
+}
+
 /*# sourceMappingURL=base.css.map */

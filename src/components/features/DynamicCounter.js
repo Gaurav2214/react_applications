@@ -1,28 +1,37 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 const DynamicCounter = () => {
 
     const [count, setCount] = useState(0);
-    let timer;
+    const [countOrder, setCountOrder] = useState(null);
+    const timerRef = useRef(null);
 
     const handleStart = () => {
-        setCount(count + 1);
+        setCountOrder(true);
+    }
+
+    const handleDecrement = () => {
+        setCountOrder(false);
     }
 
     const handlePause = () => {
-        clearTimeout(timer);
+        clearTimeout(timerRef.current);
     }
 
     const handleReset = () => {
         setCount(0);
-        clearTimeout(timer);
+        setCountOrder(null);
+        clearTimeout(timerRef.current);
     }
 
     useEffect(() => {
-        if (count) {
-            timer = setTimeout(handleStart, 800);
+        if(countOrder !== null){
+            timerRef.current = setTimeout(() => {
+                setCount(prev => countOrder ? prev + 1 : prev - 1);
+            }, 800);
         }
-    }, [count]);
+        return () => clearTimeout(timerRef.current);
+    }, [count, countOrder]);
 
     return (
         <div className='container'>
@@ -36,6 +45,7 @@ const DynamicCounter = () => {
                     <button className='btn' onClick={handleStart}>Start</button>
                     <button className='btn' onClick={handlePause}>Pause</button>
                     <button className='btn' onClick={handleReset}>Reset</button>
+                    <button className='btn' onClick={handleDecrement}>Decrement</button>
                 </div>
             </div>
         </div>

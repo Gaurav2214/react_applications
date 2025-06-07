@@ -9,6 +9,7 @@ import ChipsInput from './features/ChipsInput';
 import ProgessBar from './features/ProgessBar';
 import FileExplorer from './features/FileExplorer';
 import ToggelPassword from './features/ToggelPassword';
+import JsQuestions from './features/JsQuestions';
 
 const Layout = () => {
   return (
@@ -23,6 +24,7 @@ const Layout = () => {
             <Route exact path='/progress-bar' element={<ProgessBar />} />
             <Route exact path='/file-explorer' element={<FileExplorer />} />
             <Route exact path='/toggle-password' element={<ToggelPassword />} />
+            <Route exact path='/js-questions' element={<JsQuestions />} />
         </Routes>
     </React.Fragment>
   )

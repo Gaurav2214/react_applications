@@ -1,15 +1,15 @@
 export const features = [
     {
-      name: 'Validate OTP',
-      routename: '/validate-otp',
+        name: 'Validate OTP',
+        routename: '/validate-otp',
     },
     {
-      name: 'Auto Search',
-      routename: '/auto-search',
+        name: 'Auto Search',
+        routename: '/auto-search',
     },
     {
-      name: 'Nested Checkboxes',
-      routename: '/checkboxes',
+        name: 'Nested Checkboxes',
+        routename: '/checkboxes',
     },
     {
         name: 'Dynamic Counter with Start, Pause and Reset Button',
@@ -30,6 +30,10 @@ export const features = [
     {
         name: 'Toggel Password',
         routename: '/toggle-password',
+    },
+    {
+        name: 'JS Questions - Machine Coding',
+        routename: '/js-questions',
     },
 ];
 
@@ -71,19 +75,19 @@ export const checkBoxData = [
             {
                 id: 6,
                 name: 'Berries',
-                children:[
+                children: [
                     {
                         id: 7,
-                        name:"Straberry",
+                        name: "Straberry",
                     },
                     {
                         id: 8,
-                        name:"Blueberry",
+                        name: "Blueberry",
                     }
                 ]
             },
             {
-                id:9,
+                id: 9,
                 name: 'Tropical',
                 children: [
                     {
@@ -97,8 +101,8 @@ export const checkBoxData = [
                 ],
             },
             {
-                id:12,
-                name:'Apple',
+                id: 12,
+                name: 'Apple',
             }
         ]
     }
@@ -109,27 +113,27 @@ export const folderStructure = [
         id: 1,
         "name": "public",
         isFolder: true,
-        "children":[
+        "children": [
             {
                 id: 2,
-               "name":"index.html",
-               isFolder: false, 
+                "name": "index.html",
+                isFolder: false,
             },
             {
                 id: 3,
-                "name":"manifest.json",
-                isFolder: false, 
+                "name": "manifest.json",
+                isFolder: false,
             },
             {
                 id: 4,
-                "name":"robot.txt",
-                isFolder: false, 
+                "name": "robot.txt",
+                isFolder: false,
             }
         ]
     },
     {
         id: 5,
-        "name":"src",
+        "name": "src",
         isFolder: true,
         children: [
             {
@@ -141,7 +145,7 @@ export const folderStructure = [
                         id: 7,
                         name: "utils",
                         isFolder: true,
-                        children:[
+                        children: [
                             {
                                 id: 8,
                                 name: "healper.js",
@@ -153,7 +157,7 @@ export const folderStructure = [
                         id: 9,
                         name: "css",
                         isFolder: true,
-                        children:[
+                        children: [
                             {
                                 id: 10,
                                 name: "base.css",
@@ -184,5 +188,94 @@ export const folderStructure = [
         id: 14,
         "name": "README.md",
         isFolder: false
+    },
+]
+
+export const jsInterQuestions = [
+    {
+        question: "Remove duplicate elements from a given array",
+        answer: `const removeDuplicateElm = () => {
+    const arr = [1,3,4,2,3,4,5];
+    const result = arr.filter((item, index) => {
+        if(arr.indexOf(item) === index){
+            return item;
+        }
+    });
+    console.log(result);
+}`
+    },
+    {
+        question: "Remove an element from array and append on begining of the array",
+        answer: `const removeAppendBegin = () => {
+    const arr = [1, 3, 4, 2, 3, 4, 5];
+    const result = arr.splice(2, 1).concat(arr);
+    console.log(result);
+
+=> Another way
+
+    const temp = [], value = 1, out = [];
+    arrNum.filter((item) => {
+        if(item == value){
+            temp.push(value);
+        } else {
+            out.push(item);
+        }
+    })
+    console.log(temp.concat(out));
+}`
+    },
+    {
+        question: "Count each element in an array - How many times they come in array",
+        answer: `const countEachElm = () => {
+    const arr = [1, 3, 4, 2, 3, 4, 5];
+    const countObj = {};
+    arr.map((item) => {
+        if(countObj[item]){
+            countObj[item]++;
+        } else {
+            countObj[item] = 1;
+        }
+    })
+
+    console.log(countObj);
+}`
+    },
+    {
+        question: "Group items on the basis of age of given array of object",
+        answer: `const countEachElm = () => {
+    const people = [
+        { name: "Alice", age: 25 },
+        { name: "Bob", age: 30 },
+        { name: "Charlie", age: 25 },
+        { name: "David", age: 30 },
+        { name: "Eve", age: 35 }
+    ];
+    const countObj = {};
+    people.map((item) => {
+        if(countObj[item.age]){
+            countObj[item.age]++;
+        } else {
+            countObj[item.age] = 1;
+        }
+    })
+
+    console.log(countObj);
+}`
+    },
+    {
+        question: "Find sum of the array",
+        answer: ""
+    },
+    {
+        question: "Find max element of array",
+        answer: ""
+    },
+    {
+        question: "Find min element of array",
+        answer: ""
+    },
+    {
+        question: "Find the pairs of array element for which sum is equal to given target value (Two Sum Problem)",
+        answer: ""
     },
 ]
