@@ -27,6 +27,10 @@ export const features = [
         name: 'File Explorer',
         routename: '/file-explorer',
     },
+    {
+        name: 'Toggel Password',
+        routename: '/toggle-password',
+    },
 ];
 
 export const autoSearchData = [

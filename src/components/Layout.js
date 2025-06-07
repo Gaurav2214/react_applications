@@ -8,6 +8,7 @@ import DynamicCounter from './features/DynamicCounter';
 import ChipsInput from './features/ChipsInput';
 import ProgessBar from './features/ProgessBar';
 import FileExplorer from './features/FileExplorer';
+import ToggelPassword from './features/ToggelPassword';
 
 const Layout = () => {
   return (
@@ -21,6 +22,7 @@ const Layout = () => {
             <Route exact path='/chips-input' element={<ChipsInput />} />
             <Route exact path='/progress-bar' element={<ProgessBar />} />
             <Route exact path='/file-explorer' element={<FileExplorer />} />
+            <Route exact path='/toggle-password' element={<ToggelPassword />} />
         </Routes>
     </React.Fragment>
   )

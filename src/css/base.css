@@ -186,8 +186,9 @@ ul.lists li a {
 .form-group {
   margin: 25px 0;
   position: relative;
+  width: fit-content;
 }
-.form-group input[type=text] {
+.form-group input[type=text], .form-group input[type=password] {
   width: 300px;
   padding: 10px 20px;
   border: 1px solid rgba(61, 87, 126, 0.45);
@@ -195,22 +196,27 @@ ul.lists li a {
   background-color: rgb(247, 247, 247);
   line-height: 24px;
 }
-.form-group input[type=text]:hover, .form-group input[type=text]:focus {
+.form-group input[type=text]:hover, .form-group input[type=text]:focus, .form-group input[type=password]:hover, .form-group input[type=password]:focus {
   outline: 0;
 }
-.form-group input[type=text]:focus, .form-group input[type=text]:-internal-autofill-selected, .form-group input[type=text]:autofill, .form-group input[type=text].valid, .form-group input[type=text]:focus-visible {
+.form-group input[type=text]:focus, .form-group input[type=text]:-internal-autofill-selected, .form-group input[type=text]:autofill, .form-group input[type=text].valid, .form-group input[type=text]:focus-visible, .form-group input[type=password]:focus, .form-group input[type=password]:-internal-autofill-selected, .form-group input[type=password]:autofill, .form-group input[type=password].valid, .form-group input[type=password]:focus-visible {
   border-image-source: linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) !important;
   border-image-slice: 0 !important;
   background: linear-gradient(white, white) padding-box, linear-gradient(97.01deg, #EE1113 0.91%, #7403FA 96.74%) border-box !important;
   background-color: transparent !important;
 }
-.form-group input[type=text]:focus + label, .form-group input[type=text]:-internal-autofill-selected + label, .form-group input[type=text]:autofill + label, .form-group input[type=text].valid + label, .form-group input[type=text]:focus-visible + label {
+.form-group input[type=text]:focus + label, .form-group input[type=text]:-internal-autofill-selected + label, .form-group input[type=text]:autofill + label, .form-group input[type=text].valid + label, .form-group input[type=text]:focus-visible + label, .form-group input[type=password]:focus + label, .form-group input[type=password]:-internal-autofill-selected + label, .form-group input[type=password]:autofill + label, .form-group input[type=password].valid + label, .form-group input[type=password]:focus-visible + label {
   top: -7px;
   background: #fff;
   padding: 0 5px;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
+}
+.form-group .icon {
+  position: absolute;
+  right: 15px;
+  top: 12px;
 }
 .form-group label {
   position: absolute;
