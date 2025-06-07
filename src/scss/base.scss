@@ -285,3 +285,33 @@ ul {
         }
     }
 }
+
+.question-container{
+    margin-top: functions.rem(40);
+    ul{
+        display: flex;
+        flex-direction: column;
+        gap: functions.rem(20);
+        li{
+            .question{
+                @include mixins.set-typography(18, 26);
+                font-family: variables.$font-gentium;
+                cursor: pointer;
+                &::before{
+                    content: '>';
+                    display: inline-block;
+                    margin-right: functions.rem(10);
+                    font-size: functions.rem(20);
+                    color: variables.$primary;
+                    font-weight: 600;
+                }
+            }
+            .answer{
+                margin-top: 20px;
+                background: rgba(0, 0, 0, 0.03);
+                border-radius: 10px;
+                padding: functions.rem(10);
+            }
+        }
+    }
+}
