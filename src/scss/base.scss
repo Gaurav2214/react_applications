@@ -101,8 +101,9 @@ ul {
 .form-group {
     margin: functions.rem(25) 0;
     position: relative;
+    width: fit-content;
 
-    input[type="text"] {
+    input[type="text"], input[type="password"] {
         width: functions.rem(300);
         padding: functions.rem(10) functions.rem(20);
         border: 1px solid rgba(61, 87, 126, 0.45);
@@ -132,6 +133,11 @@ ul {
                 font-weight: 400;
             }
         }
+    }
+    .icon{
+        position: absolute;
+        right: 15px;
+        top: 12px;
     }
 
     label {
