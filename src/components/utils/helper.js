@@ -268,11 +268,31 @@ export const jsInterQuestions = [
     },
     {
         question: "Find max element of array",
-        answer: ""
+        answer: `function findMaxNumber(arr) {
+
+    if (arr.length === 0) return null;
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}`
     },
     {
         question: "Find min element of array",
-        answer: ""
+        answer: `function findMinNumber() {
+    const arr = [3,7,2,9,34];
+    if (arr.length === 0) return null;
+    let min = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}`
     },
     {
         question: "Find the pairs of array element for which sum is equal to given target value (Two Sum Problem)",

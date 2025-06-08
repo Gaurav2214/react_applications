@@ -1,44 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { jsInterQuestions } from '../utils/helper';
 
 const JsQuestions = () => {
+    const [active, setActive] = useState();
 
-    const countEachElm = () => {
-        const people = [
-            { name: "Alice", age: 25 },
-            { name: "Bob", age: 30 },
-            { name: "Charlie", age: 25 },
-            { name: "David", age: 30 },
-            { name: "Eve", age: 35 }
-        ];
-        const countObj = {};
-        people.map((item) => {
-            if(countObj[item.age]){
-                countObj[item.age]++;
-            } else {
-                countObj[item.age] = 1;
+    const handleAccord = (index) => {
+        setActive(active === index ? null : index);
+    }
+
+    function findMinNumber() {
+        const arr = [3,7,2,9,34];
+        if (arr.length === 0) return null;
+        let min = arr[0];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
             }
-        })
-
-        console.log(countObj);
+        }
+        return min;
     }
 
     return (
         <div className='container'>
             <div className='module-head'>
                 <h2 className='module-title'>JavaScript Questions - Machine Coding Interview</h2>
-                {countEachElm()}
+                {/* {findMinNumber()} */}
             </div>
             <div className='question-container'>
                 <ul>
                     {jsInterQuestions.map((item, index) => 
-                    <li key={index}>
+                    <li key={index} onClick={() => handleAccord(index)}>
                         <div className='question'>{item.question}</div>
-                        <div className='answer'>
-                            <pre>
-                            {item.answer}
-                            </pre>
-                        </div>
+                        {active === index && (
+                            <div className='answer'>
+                                <pre>
+                                {item.answer}
+                                </pre>
+                            </div>
+                        )}
                     </li>
                     )}
                 </ul>
