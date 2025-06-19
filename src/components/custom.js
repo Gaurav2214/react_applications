@@ -447,3 +447,27 @@ var addTwoNumbers = function(l1, l2) {
 };
 
 console.log(addTwoNumbers(l1, l2));
+
+
+const arr23 = [2,3,4,4,5,1,27,8];
+const result111 = [];
+
+arr23.filter((item, index) => {
+    if(arr23.indexOf(item) === index){
+        result111.push(item);
+    }
+})
+
+
+arr23.slice(1, 5).concat(arr23);
+const ccount = {};
+arr23.filter((item) => {
+    if(ccount[item]){
+        ccount[item]++;
+    } else{
+        ccount[item] = 1;
+    }
+})
+
+let sum = 0;
+arr23.filter((item) => sum = sum + item); 

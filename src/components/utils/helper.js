@@ -264,7 +264,14 @@ export const jsInterQuestions = [
     },
     {
         question: "Find sum of the array",
-        answer: ""
+        answer: `const sum = arr.reduce((acc, curr) => acc + curr, 0);
+        
+=> Another way
+
+let sum = 0;
+arr.filter((item) => sum = sum + item);
+console.log(sum);
+    `
     },
     {
         question: "Find max element of array",
