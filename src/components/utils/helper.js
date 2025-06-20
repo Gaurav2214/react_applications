@@ -305,4 +305,35 @@ console.log(sum);
         question: "Find the pairs of array element for which sum is equal to given target value (Two Sum Problem)",
         answer: ""
     },
+    {
+        question: "Write a function reverseWords that takes a sentence string as input and returns a new string where each word is reversed, but the order of the words remains the same. Words are separated by spaces. Preserve the original spacing.",
+        answer: `function reverseWords(sentence) {
+    const sentArr =  sentence.split(' ');
+    const sentArrRev = [];
+
+    sentArr.filter((item) => {
+        sentArrRev.push(item.split('').reverse().join(''));
+    })
+
+    return sentArrRev.join(' ');
+}`
+    },
+    {
+        question: "Write a function countVowels that takes a string as input and returns the number of vowels in that string.",
+        answer: `function countVowels(str) {
+    let vowelCount = 0;
+    let sentence = str.toLowerCase().split('');
+
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    for(let i=0;i<vowels.length;i++){
+        for(let j=0;j<sentence.length;j++){
+            if(vowels[i] === sentence[j]){
+                vowelCount++;
+            }
+        }
+    }
+    return vowelCount;
+}`,
+    }
 ]
