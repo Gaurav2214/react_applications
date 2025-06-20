@@ -471,3 +471,33 @@ arr23.filter((item) => {
 
 let sum = 0;
 arr23.filter((item) => sum = sum + item); 
+
+const reverseWord = () =>{
+    debugger;
+    let sentence = 'Hello World';
+    const sentArr =  sentence.split(' ');
+    const sentArrRev = [];
+
+    sentArr.filter((item) => {
+        sentArrRev.push(item.split('').reverse().join(''));
+    })
+
+    const result8 = sentArrRev.join(' ');
+    console.log(result8);
+}
+
+const countVowels = (str) => {
+    let vowelCount = 0;
+    let sentence = str.toLowerCase().split('');
+
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    for(let i=0;i<vowels.length;i++){
+        for(let j=0;j<sentence.length;j++){
+            if(vowels[i] === sentence[j]){
+                vowelCount++;
+            }
+        }
+    }
+    return vowelCount;
+}
