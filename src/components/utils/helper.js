@@ -335,5 +335,22 @@ console.log(sum);
     }
     return vowelCount;
 }`,
+    },
+    {
+        question: "Write a function that checks whether two input strings are anagrams of each other. An anagram is a word formed by rearranging the letters of another word, using all original letters exactly once.",
+        answer: `function isAnagram(str1, str2) {
+
+    let result;
+
+    let s1 = str1.toLowerCase().split('').sort().join('');
+    let s2 = str2.toLowerCase().split('').sort().join('');
+
+    if (s1 == s2) {
+        result = true;
+    } else {
+        result = false;
+    }
+    return result;
+}`,
     }
 ]
