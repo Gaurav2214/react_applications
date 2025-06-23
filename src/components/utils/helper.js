@@ -32,6 +32,10 @@ export const features = [
         routename: '/toggle-password',
     },
     {
+        name: 'ZigZag Merge String',
+        routename: '/zigzag-merge',
+    },
+    {
         name: 'JS Questions - Machine Coding',
         routename: '/js-questions',
     },

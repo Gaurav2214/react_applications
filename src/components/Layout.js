@@ -10,6 +10,7 @@ import ProgessBar from './features/ProgessBar';
 import FileExplorer from './features/FileExplorer';
 import ToggelPassword from './features/ToggelPassword';
 import JsQuestions from './features/JsQuestions';
+import ZigZag from './features/ZigZag';
 
 const Layout = () => {
   return (
@@ -24,6 +25,7 @@ const Layout = () => {
             <Route exact path='/progress-bar' element={<ProgessBar />} />
             <Route exact path='/file-explorer' element={<FileExplorer />} />
             <Route exact path='/toggle-password' element={<ToggelPassword />} />
+            <Route exact path='/zigzag-merge' element={<ZigZag />} />
             <Route exact path='/js-questions' element={<JsQuestions />} />
         </Routes>
     </React.Fragment>
