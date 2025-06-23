@@ -352,5 +352,81 @@ console.log(sum);
     }
     return result;
 }`,
+    },
+    {
+        question: "Write a function that takes an array containing a mix of characters and numbers and returns a sorted array. The sorted array should have all characters (letters) in ascending order first, followed by all numbers in ascending order.",
+        answer: `function customSort() {
+
+    const arr = ["g", "s", 5, 2, "c", "e", 6, 1, "a"];
+    if (arr.length === 0) return arr;
+  
+    const numbers = [];
+    const letters = [];
+  
+    for (let i = 0; i < arr.length; i++) {
+      if (typeof(arr[i]) === 'number') {
+        numbers.push(arr[i]);
+      } else {
+        letters.push(arr[i]);
+      }
     }
+  
+    function bubbleSort(arr) {
+      const len = arr.length;
+      for (let i = 0; i < len - 1; i++) {
+        for (let j = 0; j < len - i - 1; j++) {
+          if (arr[j] > arr[j + 1]) {
+            const temp = arr[j];
+            arr[j] = arr[j + 1];
+            arr[j + 1] = temp;
+          }
+        }
+      }
+      return arr;
+    }
+  
+    bubbleSort(numbers);
+    bubbleSort(letters);
+  
+    const result = [...letters, ...numbers];
+    return result;
+}
+  
+===============================================================================
+
+const usingSortMethod = () => {
+    const arr = ["g", "s", 5, 2, "c", "e", 6, 1, "a"];
+    if (arr.length === 0) return arr;
+  
+    const numbers = [];
+    const letters = [];
+
+    for(let i=0; i<arr.length; i++){
+        if(typeof(arr[i]) === 'number'){
+            numbers.push(arr[i]);
+        } else {
+            letters.push(arr[i]);
+        }
+    }
+    return letters.sort().concat(numbers.sort());
+
+}`,
+    }, 
+    {
+        question: "Write a function that determines whether a given string is a valid palindrome. A palindrome is a word, phrase, or sequence that reads the same backward as forward. Ignore cases and all non-alphanumeric characters.",
+        answer: `function validatePalindrome() {
+    const str = 'A man, a plan, a canal: Panama';
+    if (str.trim().length === 0) return true;
+
+    const nStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const rStr = nStr.split('').reverse().join('').toLowerCase();
+
+    if (nStr == rStr) {
+        return true;
+    } else {
+        return false;
+    }
+}`,
+    },
+
 ]

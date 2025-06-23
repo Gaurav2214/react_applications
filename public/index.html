@@ -39,6 +39,30 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <!-- <div id="outer">
+      outer
+      <div id="inner">
+        inner
+        <button id="btn">Click me</button>
+      </div>
+    </div>
+    <script>
+      document.getElementById('outer').addEventListener(
+        'click', () => console.log('outer'),
+        false
+      );
+      document.getElementById('inner').addEventListener(
+        'click', (e) => {console.log('inner'); e.stopPropagation()},
+        false
+      )
+      document.getElementById('btn').addEventListener(
+        'click', (e) => {console.log('btn click');
+        e.stopPropagation();
+      },
+      true
+      )
+    </script> -->
       
   </body>
 </html>
