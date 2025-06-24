@@ -36,6 +36,10 @@ export const features = [
         routename: '/zigzag-merge',
     },
     {
+        name: 'Check Password Strength',
+        routename: '/pass-strength',
+    },
+    {
         name: 'JS Questions - Machine Coding',
         routename: '/js-questions',
     },

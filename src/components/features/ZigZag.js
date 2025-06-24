@@ -22,10 +22,6 @@ const ZigZag = () => {
 
             setResult(arr1);
         }
-
-
-
-
     }
 
     return (
