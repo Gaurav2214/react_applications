@@ -11,6 +11,7 @@ import FileExplorer from './features/FileExplorer';
 import ToggelPassword from './features/ToggelPassword';
 import JsQuestions from './features/JsQuestions';
 import ZigZag from './features/ZigZag';
+import PasswordStrength from './features/PasswordStrength';
 
 const Layout = () => {
   return (
@@ -26,6 +27,7 @@ const Layout = () => {
             <Route exact path='/file-explorer' element={<FileExplorer />} />
             <Route exact path='/toggle-password' element={<ToggelPassword />} />
             <Route exact path='/zigzag-merge' element={<ZigZag />} />
+            <Route exact path='/pass-strength' element={<PasswordStrength />} />
             <Route exact path='/js-questions' element={<JsQuestions />} />
         </Routes>
     </React.Fragment>
