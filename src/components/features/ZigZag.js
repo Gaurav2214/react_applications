@@ -5,7 +5,6 @@ const ZigZag = () => {
     const [result, setResult] = useState('');
 
     const handleSubmit = () => {
-        debugger;
         if(inputVal.length === 0){
             setResult('');
         } else {
