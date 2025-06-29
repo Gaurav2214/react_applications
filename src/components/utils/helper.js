@@ -40,6 +40,10 @@ export const features = [
         routename: '/pass-strength',
     },
     {
+        name: 'Dynamic Greeting App',
+        routename: '/dynamic-greet',
+    },
+    {
         name: 'JS Questions - Machine Coding',
         routename: '/js-questions',
     },
@@ -436,5 +440,36 @@ const usingSortMethod = () => {
     }
 }`,
     },
+    {
+        question: "Largest Number Formed",
+        answer: `function formLargestNumber(arr) {
+
+    const num = arr.map(num => num.toString());
+  
+    num.sort((a, b) => {
+      return (b + a).localeCompare(a + b);
+    });
+  
+    if (num[0] === '0') {
+      return '0';
+    }
+  
+    return num.join('');
+}`
+    },
+    {
+        question: "Flatten Nested Array",
+        answer: `function flattenArray(arr) {
+    const result = [];
+    arr.forEach((val) => {
+        if (Array.isArray(val)) {
+            result.push(...flattenArray(val)); 
+        } else {
+            result.push(val);
+        }
+    })
+    return result;
+}`,
+    }
 
 ]

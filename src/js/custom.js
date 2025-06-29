@@ -572,3 +572,18 @@ function validatePalindrome() {
         return false;
     }
 }
+
+function formLargestNumber(arr) {
+
+    const num = arr.map(num => num.toString());
+  
+    num.sort((a, b) => {
+      return (b + a).localeCompare(a + b);
+    });
+  
+    if (num[0] === '0') {
+      return '0';
+    }
+  
+    return num.join('');
+}
