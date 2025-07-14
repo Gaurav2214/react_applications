@@ -44,10 +44,57 @@ export const features = [
         routename: '/dynamic-greet',
     },
     {
+        name: 'Employee Database Management',
+        routename: '/emp-db-mgnt',
+    },
+    {
         name: 'JS Questions - Machine Coding',
         routename: '/js-questions',
     },
 ];
+
+export const employeeData = [
+    {
+        id: 1,
+        firstName: "Alex",
+        lastName: "King",
+        image: "https://brandequity.economictimes.indiatimes.com/Themes/Release/theme4/images/icons/et-default-user.svg",
+        email: "alex.king@gmail.com",
+        dob: "12/10/1987",
+        salary: 100,
+        address: "Noida",
+    },
+    {
+        id: 2,
+        firstName: "Johney",
+        lastName: "King",
+        image: "https://brandequity.economictimes.indiatimes.com/Themes/Release/theme4/images/icons/et-default-user.svg",
+        email: "Johney.king@gmail.com",
+        dob: "15/10/1984",
+        salary: 2200,
+        address: "NewYork",
+    },
+    {
+        id: 3,
+        firstName: "Donald",
+        lastName: "T",
+        image: "https://brandequity.economictimes.indiatimes.com/Themes/Release/theme4/images/icons/et-default-user.svg",
+        email: "Donald.king@gmail.com",
+        dob: "06/11/1989",
+        salary: 2300,
+        address: "Washington",
+    },
+    {
+        id: 4,
+        firstName: "Joffra",
+        lastName: "Archer",
+        image: "https://brandequity.economictimes.indiatimes.com/Themes/Release/theme4/images/icons/et-default-user.svg",
+        email: "Joffra.Archer@gmail.com",
+        dob: "09/04/1990",
+        salary: 4200,
+        address: "London",
+    }
+]
 
 export const autoSearchData = [
     { number: 1, title: "Consultation & Assessment", description: "Connect with our experts to assess your goals, career plans, and program options." },
@@ -470,6 +517,39 @@ const usingSortMethod = () => {
     })
     return result;
 }`,
+    },
+    {
+        question: "Flatten Nested Object/Array",
+        answer:`const inputObj = {a:1, b:2, c:["four", "five"], d:{e:1, f:2},g:{h:["six","seven"],i:8}};
+
+const flatObject = (arr) => {
+
+    const result = {};
+
+    for(let i in arr){
+
+        if(typeof(arr[i]) === 'object' && !Array.isArray(arr[i])){
+
+            const temp = flatObject(arr[i]);
+
+            for(let j in temp){
+                result[i+''+j] = temp[j];
+            }
+
+        } else if(Array.isArray(arr[i])) {
+
+            arr[i].map((item, index) => {
+                result[i+''+index] = item;
+            });
+            
+        } else {
+            result[i] = arr[i];
+        }
     }
+    return result;
+}
+
+console.log(flatObject(inputObj));`,
+}
 
 ]
