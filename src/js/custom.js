@@ -587,3 +587,36 @@ function formLargestNumber(arr) {
   
     return num.join('');
 }
+
+const divs = document.querySelectorAll('div');
+const divArray = Array.from(divs);
+
+Array.from([1,2,3], x => x*2) // [2, 4, 6]
+
+//Create Worker.js
+
+self.onmessage = (e) => {
+    const sorted = heavySort(e.data); // CPU-heavy tasks
+    postMessage(sorted);
+};
+
+// React Component
+
+const [data, setData] = useState([]);
+
+useEffect(() => {
+    const worker = new Worker(new URL('./worker.js', import.meta.url));
+    worker.postMessage(largeData);
+    worker.onmessage = (e) => {
+        setData(e.data);
+        worker.terminate();
+    };
+}, []);
+
+function a() { ;
+    var b = 10;
+    c();
+    function c() {
+        console.log(b);
+    }
+}
