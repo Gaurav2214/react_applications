@@ -385,6 +385,7 @@ ul {
                 min-width: 150px;
                 max-width: 150px;
                 height: auto;
+                border-radius: 50%;
             }
         }
     }
@@ -411,6 +412,10 @@ ul {
         h2{
             @include mixins.set-typography(24, 36);
             font-family: variables.$font-gentium;
+        }
+        .form-controls{
+            display: flex;
+            gap: functions.rem(10);
         }
     }
 }
