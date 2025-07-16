@@ -37,6 +37,11 @@ const DatabaseManagement = () => {
         setAddEmp(true);
     }
 
+    const handleSubmit = (formData) => {
+        console.log(formData);
+        setEmployee(prev => [...prev, formData]);
+    }
+
 
     return (
         <div className='container'>
@@ -60,7 +65,7 @@ const DatabaseManagement = () => {
 
                     {showDetail &&
                         <div className=''>
-                            <img src={showDetail?.image} />
+                            <img src={showDetail?.image} alt="Profile images" />
                             <p>{showDetail?.firstName} {showDetail?.lastName}</p>
                             <p>{showDetail?.email} </p>
                             <p>{showDetail?.dob} </p>
@@ -76,7 +81,7 @@ const DatabaseManagement = () => {
 
                 </div>
             </div>
-            {addEmp && <Modal />}
+            {addEmp && <Modal onClose={() => setAddEmp(false)} onSubmit={handleSubmit}  />}
         </div>
     )
 }
