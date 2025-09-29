@@ -14,6 +14,7 @@ import ZigZag from './features/ZigZag';
 import PasswordStrength from './features/PasswordStrength';
 import DynamicGreetingApp from './features/DynamicGreetingApp';
 import DatabaseManagement from './features/DatabaseManagement';
+import AutoLogout from './features/AutoLogout';
 
 const Layout = () => {
   return (
@@ -32,6 +33,7 @@ const Layout = () => {
             <Route exact path='/pass-strength' element={<PasswordStrength />} />
             <Route exact path='/dynamic-greet' element={<DynamicGreetingApp />} />
             <Route exact path='/emp-db-mgnt' element={<DatabaseManagement />} />
+            <Route exact path='/auto-logout' element={<AutoLogout />} />
             <Route exact path='/js-questions' element={<JsQuestions />} />
         </Routes>
     </React.Fragment>

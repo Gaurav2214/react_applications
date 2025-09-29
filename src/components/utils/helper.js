@@ -48,6 +48,10 @@ export const features = [
         routename: '/emp-db-mgnt',
     },
     {
+        name: 'Implement the auto-logout logic',
+        routename: '/auto-logout',
+    },
+    {
         name: 'JS Questions - Machine Coding',
         routename: '/js-questions',
     },

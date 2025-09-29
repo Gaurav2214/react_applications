@@ -8,13 +8,27 @@ const DatabaseManagement = () => {
     const [norecord, setNorecord] = useState('');
     const [showDetail, setShowDetail] = useState({});
     const [addEmp, setAddEmp] = useState(false);
+    const [prevId, setPrevId] = useState(null);
 
     useEffect(() => {
-
         employee && employee.filter((item, index) => {
             if (index === 0) {
                 setShowDetail(item);
             }
+        })
+    }, []);
+
+    useEffect(() => {
+
+        employee && employee.filter((item, index) => {
+            if(prevId !== null){
+                if (item?.id === prevId) {
+                    setShowDetail(item);
+                }
+            } else if (index === 0) {
+                setShowDetail(item);
+            }
+            
         })
         if(employee.length === 0){
             setShowDetail('');
@@ -29,7 +43,8 @@ const DatabaseManagement = () => {
             }
         })
     }
-    const removeRecord = (id) => {
+    const removeRecord = (id, prevId) => {
+        setPrevId(prevId);
         setEmployee(prev => prev.filter((item) => item?.id !== id));
     }
 
@@ -53,10 +68,10 @@ const DatabaseManagement = () => {
             <div className='section-employee'>
                 <div className='section-employee__left'>
                     <ul>
-                        {employee && employee.map((item) =>
+                        {employee && employee.map((item, index) =>
                             <li key={item?.id} >
                                 <p onClick={() => handledDetails(item?.id)}>{item.firstName + ' ' + item?.lastName}</p> 
-                                <span onClick={() => removeRecord(item?.id)}>X</span>
+                                <span onClick={() => removeRecord(item?.id, index !== 0 ? employee[index-1]?.id : null)}>X</span>
                             </li>
                         )}
                     </ul>
